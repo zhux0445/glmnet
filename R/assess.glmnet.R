@@ -68,10 +68,7 @@
 #' idmin = match(fit3c$lambda.min, fit3c$lambda)
 #' confusion.glmnet(fit3c$fit.preval, newy = y, family="multinomial")[[idmin]]
 #'
-#' @export assess.glmnet
-assess.glmnet=function(object,newx=NULL,newy,weights=NULL,
-                       family=c("gaussian","binomial","poisson","multinomial","cox","mgaussian"),
-                       ...){
+
 ### object must be either a glmnet or cv.glmnet object, or else a matrix/vector of predictions of a glmnet model  (not on the mean scale, but natural parameter scale)
 ### It must either be a matrix or an array. The last dimension can be 1.
     oclass=grep("glmnet",class(object))
